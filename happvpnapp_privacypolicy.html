@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>HappVPN Privacy Policy</title>
+</head>
+<body>
+  <main>
+    <h1>HappVPN Privacy Policy</h1>
+
+    <p>Effective date: July 31, 2026.</p>
+
+    <p>
+      This Privacy Policy explains how the HappVPN Android application and the
+      HappVPN backend access, collect, use, disclose, retain, and delete user
+      and device data.
+    </p>
+
+    <p>
+      Operator: ANATOLY ALEKSEEVICH SHEVELEV.
+      Taxpayer Identification Number: 381117785055.
+      Privacy email: happvpnapp@gmail.com.
+      Telephone: +79964373684
+    </p>
+
+    <h2>1. Application purpose</h2>
+
+    <p>
+      VPN is the core functionality of HappVPN. Following a user action,
+      HappVPN uses Android VpnService to route all device traffic or traffic
+      from user-selected applications through a selected VPN endpoint. The user
+      can disconnect the VPN at any time.
+    </p>
+
+    <h2>2. Data collected by the HappVPN backend</h2>
+
+    <h3>2.1. Pseudonymous device identifier</h3>
+
+    <p>
+      The application creates a device identifier by applying SHA-256 to the
+      app-scoped Android ID. The original Android ID is not transmitted to the
+      HappVPN backend. The pseudonymous identifier is used for access
+      verification, trial usage, subscriptions, payments, abuse prevention,
+      and one-time migration of a previously purchased subscription.
+    </p>
+
+    <p>
+      The identifier may survive reinstallation for the same Android user,
+      application package, and signing key. It may change after a factory reset,
+      a change of Android user, or a change of the application signing key.
+    </p>
+
+    <h3>2.2. Play Integrity</h3>
+
+    <p>
+      Distributed release builds use Google Play Integrity to verify the
+      application and device environment. Google receives the Play Integrity
+      request. The HappVPN backend receives an encrypted token and submits it to
+      Google for verification. The result is used only to protect access to VPN
+      servers, trials, subscriptions, and payments. The Play Integrity token is
+      not stored as a permanent record in the HappVPN database.
+    </p>
+
+    <h3>2.3. Trial access, subscriptions, and payments</h3>
+
+    <p>The HappVPN backend may store:</p>
+
+    <ul>
+      <li>the trial usage date and the number of seconds used;</li>
+      <li>the subscription expiration date and the last payment date;</li>
+      <li>the selected plan and access period;</li>
+      <li>the payment amount, currency, status, and timestamps;</li>
+      <li>the payment provider and transaction identifier;</li>
+      <li>receipt generation and delivery status.</li>
+    </ul>
+
+    <p>
+      The current version does not require a Google account or email address to
+      use HappVPN. HappVPN does not receive or store full card numbers, CVC/CVV
+      codes, banking passwords, or cryptocurrency wallet private keys. Users
+      enter such information directly on the payment provider's service.
+    </p>
+
+    <p>
+      For one-time migration of an older subscription, the application may send
+      a signed legacy session token to the backend. The contained identifier is
+      used only to transfer the remaining subscription period to the current
+      pseudonymous device identifier. The token is deleted from local
+      application storage after successful migration.
+    </p>
+
+    <h3>2.4. Technical request data</h3>
+
+    <p>
+      When a device contacts the HappVPN API and infrastructure, the IP address,
+      request date and time, requested method, response code, client type, and
+      error details may be processed. This information is used to deliver
+      responses, secure and diagnose the service, and prevent abuse. It is not
+      used for advertising or advertising profiles.
+    </p>
+
+    <h2>3. Data processed only on the device</h2>
+
+    <p>The application may process and store locally:</p>
+
+    <ul>
+      <li>language, theme, and other application preferences;</li>
+      <li>the VPN server list and server availability test results;</li>
+      <li>the last connection and VPN state;</li>
+      <li>notification and trial state;</li>
+      <li>local error logs limited to 256 KB;</li>
+      <li>
+        the installed application list and selected package names used for
+        split tunneling.
+      </li>
+    </ul>
+
+    <p>
+      The installed application list and split-tunneling selections are not
+      sent to the HappVPN backend. Local error logs are not uploaded
+      automatically. Users can view or clear them in the application.
+    </p>
+
+    <h2>4. VPN traffic and DNS</h2>
+
+    <p>
+      When the VPN is enabled, network traffic is sent through the selected VPN
+      endpoint to websites and services requested by the user. Domain
+      resolution may use the system DNS resolver or Cloudflare's encrypted DNS
+      service at https://1.1.1.1/dns-query. Transmission from the device to the
+      VPN endpoint is protected by the selected VPN protocol and configuration.
+    </p>
+
+    <p>
+      The HappVPN application and API do not collect or retain the contents of
+      VPN traffic, browsing history, search queries, messages, or the contents
+      of transferred files. The selected VPN endpoint operator, DNS provider,
+      and requested internet services may technically process traffic under
+      their own privacy practices.
+    </p>
+
+    <p>
+      HappVPN does not redirect or manipulate traffic from other applications
+      for advertising or advertising monetization.
+    </p>
+
+    <h2>5. Purposes of processing</h2>
+
+    <p>Data is used only to:</p>
+
+    <ul>
+      <li>provide and maintain the VPN connection;</li>
+      <li>provide server selection and split tunneling;</li>
+      <li>verify access and provide trial usage;</li>
+      <li>create, verify, and restore payments and subscriptions;</li>
+      <li>verify distributed release builds;</li>
+      <li>provide VPN and subscription notifications;</li>
+      <li>secure and diagnose the service and prevent abuse;</li>
+      <li>comply with applicable law.</li>
+    </ul>
+
+    <h2>6. Data disclosures and service providers</h2>
+
+    <p>
+      HappVPN does not sell user data, disclose it to advertising networks, or
+      use advertising or third-party analytics SDKs. Information required to
+      provide the service may be disclosed to:
+    </p>
+
+    <ul>
+      <li>Google for Play Integrity verification;</li>
+      <li>YooKassa and Heleket for payment creation and verification;</li>
+      <li>infrastructure providers that host the HappVPN API and database;</li>
+      <li>
+        selected VPN endpoints, DNS providers, and requested internet services
+        while the VPN is active;
+      </li>
+      <li>public authorities when disclosure is required by applicable law.</li>
+    </ul>
+
+    <h2>7. Android permissions</h2>
+
+    <ul>
+      <li>
+        Internet, Network State, and Wi-Fi State are used for API access,
+        network checks, and VPN connections.
+      </li>
+      <li>VpnService is used to create the VPN tunnel.</li>
+      <li>Foreground Service is used to maintain an active VPN connection.</li>
+      <li>Notifications are used for VPN, trial, and subscription status.</li>
+      <li>Vibrate provides tactile feedback for selected actions.</li>
+      <li>
+        Query All Packages is used only to let users select applications for
+        split tunneling.
+      </li>
+    </ul>
+
+    <h2>8. Retention and deletion</h2>
+
+    <ul>
+      <li>
+        Local data remains until it is cleared in the application, Android
+        application data is cleared, or the application is uninstalled.
+      </li>
+      <li>Trial usage records are deleted by the backend after 7 days.</li>
+      <li>
+        Successful payment transactions are generally removed from the
+        operational database after 120 days. Unpaid or canceled transactions
+        are generally removed after 3 days once any necessary status check is
+        complete.
+      </li>
+      <li>
+        The pseudonymous identifier and subscription state are retained while
+        necessary to provide or restore access, prevent abuse, or meet legal
+        obligations.
+      </li>
+      <li>
+        Certain payment and fiscal records may be retained longer when required
+        by law.
+      </li>
+    </ul>
+
+    <p>
+      HappVPN does not create a user account. To request deletion of backend
+      data, send a request to happvpnapp@gmail.com. The Operator may request
+      information needed to locate the data and protect it against deletion by
+      an unauthorized person. Verified data will be deleted or de-identified
+      unless retention is required by law.
+    </p>
+
+    <h2>9. Data security</h2>
+
+    <p>
+      HappVPN uses HTTPS for communication with its API, access controls for
+      server infrastructure, a pseudonymous identifier instead of the original
+      Android ID, Play Integrity for release builds, and Android platform
+      protections. No transmission or storage method can guarantee absolute
+      security.
+    </p>
+
+    <h2>10. Children</h2>
+
+    <p>
+      HappVPN is not specifically directed to children and does not knowingly
+      collect children's personal data. If the Operator learns that a child's
+      data was collected without required parental consent, it will be deleted
+      unless another lawful basis requires retention.
+    </p>
+
+    <h2>11. Changes to this Policy</h2>
+
+    <p>
+      This Policy may be updated when application functionality, data practices,
+      or legal requirements change. The current text and a new effective date
+      will be published on this page.
+    </p>
+
+    <h2>12. Contact</h2>
+
+    <p>
+      Data operator: ANATOLY ALEKSEEVICH SHEVELEV.
+      Taxpayer Identification Number: 381117785055.
+      Email: happvpnapp@gmail.com.
+      Telephone: +79964373684
+    </p>
+  </main>
+</body>
+</html>
