@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>CryptoVPN Privacy Policy</title>
+</head>
+<body>
+  <main>
+    <h1>CryptoVPN Privacy Policy</h1>
+
+    <p>Effective date: September 25, 2026.</p>
+
+    <p>
+      This Privacy Policy explains how the CryptoVPN Android application,
+      the CryptoVPN Fleet service, and participating VPN nodes access, use,
+      retain, and delete data. For privacy questions, contact
+      <a href="mailto:vpnappcrypto@gmail.com">vpnappcrypto@gmail.com</a>.
+    </p>
+
+    <h2>1. Application purpose</h2>
+
+    <p>
+      VPN connectivity is CryptoVPN's core function. When you choose to
+      connect, CryptoVPN uses Android VpnService to route eligible device
+      traffic through a selected VPN node. You can disconnect at any time.
+      Optional split-tunneling rules can route selected applications or domains
+      outside the tunnel. The application routes .ru and .su domains directly.
+    </p>
+
+    <h2>2. Data processed by CryptoVPN Fleet and VPN nodes</h2>
+
+    <h3>2.1. Device identity and access credentials</h3>
+
+    <p>
+      The application creates a random device ID and a separate secret for
+      authenticating requests to Fleet. The secret is protected in local
+      Android storage; Fleet stores a one-way digest of it. The application
+      also sends a SHA-256-derived value based on the app-scoped Android ID
+      so Fleet can recognize the same device after a normal reinstallation.
+      The original Android ID is not sent to Fleet. Fleet stores a keyed
+      digest of the derived value, not the value itself. These identifiers
+      are used for access control, trial continuity, and abuse prevention.
+    </p>
+
+    <p>
+      The derived identifier may remain the same after reinstallation when
+      the Android user and application signing key remain the same. It may
+      change after a factory reset, a change of Android user, or a change of
+      signing key. It is not an account name or an advertising identifier.
+    </p>
+
+    <h3>2.2. VPN access, trial, and usage</h3>
+
+    <p>Fleet and the selected VPN node may store:</p>
+
+    <ul>
+      <li>the device ID, account creation time, and last activity time;</li>
+      <li>the selected country, node, access status, and VPN peer assignment;</li>
+      <li>the trial start and reset or expiration times and traffic limit;</li>
+      <li>aggregate bytes transferred, used to show and enforce the trial limit;</li>
+      <li>technical VPN peer identifiers and connection state needed to provide the tunnel.</li>
+    </ul>
+
+    <p>
+      The current application displays plan options but does not process
+      payments or collect payment card details. This Policy must be updated
+      before payment processing is introduced.
+    </p>
+
+    <h3>2.3. Google Play Integrity, when enabled</h3>
+
+    <p>
+      The application supports Google Play Integrity. If this check is enabled
+      by Fleet, the application asks Google Play for a verification token;
+      Fleet sends that token to Google for verification. The verdict is used
+      to help identify an authentic application and device environment.
+      Fleet may issue a time-limited access confirmation after verification.
+      The verification token is not stored as a permanent device record in
+      Fleet's database.
+    </p>
+
+    <h3>2.4. Technical request data</h3>
+
+    <p>
+      When the application contacts Fleet or a VPN node, the source IP
+      address, request time, requested endpoint, response status, and error
+      information may be processed by the service and its infrastructure
+      providers to deliver requests, diagnose failures, and prevent abuse.
+      This information is not used to build advertising profiles.
+    </p>
+
+    <h2>3. Data processed on your device</h2>
+
+    <p>The application may store or process locally:</p>
+
+    <ul>
+      <li>the protected device credential and a time-limited integrity confirmation, if enabled;</li>
+      <li>language, notification, selected country, and split-tunneling preferences;</li>
+      <li>installed application names and package names displayed for app-based split tunneling;</li>
+      <li>domain rules entered for domain-based split tunneling;</li>
+      <li>connection history: node label, start time, duration, and aggregate traffic for up to 64 connections;</li>
+      <li>current VPN state, traffic counters, and node latency measurements.</li>
+    </ul>
+
+    <p>
+      The installed application list, selected application package names,
+      saved domain rules, and connection-history entries are not uploaded to
+      Fleet by the current application. Domain rules are applied by the local
+      tunnel, while DNS providers and requested services may still receive
+      the information needed to resolve and serve a requested domain.
+    </p>
+
+    <h2>4. VPN traffic and DNS</h2>
+
+    <p>
+      While connected, traffic covered by the VPN is encrypted between your
+      device and the selected VPN node. The node forwards it to the internet.
+      Traffic excluded by split tunneling, including .ru and .su domains, uses
+      a direct connection instead. DNS queries may be processed by the DNS
+      servers configured for the tunnel or by the device's direct network
+      resolver for excluded traffic. Fleet requests may use the direct network
+      so that the application can reach the service while the VPN is active.
+    </p>
+
+    <p>
+      Fleet records aggregate traffic usage, not the contents of messages,
+      files, or web pages. VPN nodes and network providers necessarily handle
+      connection metadata and traffic to route it. Requested websites, DNS
+      providers, and network operators may process data under their own
+      privacy practices. CryptoVPN does not redirect traffic for advertising
+      monetization.
+    </p>
+
+    <h2>5. Purposes of processing</h2>
+
+    <ul>
+      <li>provide and maintain VPN connectivity and server selection;</li>
+      <li>authenticate devices and restore access after reinstallation;</li>
+      <li>measure trial usage and enforce access limits;</li>
+      <li>apply user-selected split-tunneling settings;</li>
+      <li>show local connection history and VPN notifications;</li>
+      <li>secure and diagnose the service and prevent abuse;</li>
+      <li>comply with applicable legal obligations.</li>
+    </ul>
+
+    <h2>6. Disclosures and service providers</h2>
+
+    <p>
+      CryptoVPN does not sell user data or use advertising or third-party
+      analytics SDKs in the current application. Data needed to operate the
+      service may be processed by:
+    </p>
+
+    <ul>
+      <li>infrastructure providers hosting Fleet and VPN nodes;</li>
+      <li>Google, only when Play Integrity verification is enabled or when you use Google services independently;</li>
+      <li>DNS providers and websites or services you choose to access;</li>
+      <li>public authorities when disclosure is required by applicable law.</li>
+    </ul>
+
+    <p>
+      If you choose to email support, your email provider will process that
+      message under its own terms. The application does not automatically
+      send your support correspondence to Fleet.
+    </p>
+
+    <h2>7. Android permissions and capabilities</h2>
+
+    <ul>
+      <li>Internet and network-state access support Fleet requests, node checks, and the VPN connection.</li>
+      <li>VpnService creates the device VPN tunnel after Android's VPN permission flow.</li>
+      <li>Foreground Service keeps an active VPN session running.</li>
+      <li>Notifications show the connection state, duration, and aggregate traffic when permitted.</li>
+      <li>Launcher-app visibility lets you choose applications for local split tunneling.</li>
+    </ul>
+
+    <h2>8. Retention and deletion</h2>
+
+    <ul>
+      <li>Local settings and history remain until overwritten, cleared with application data, or removed by uninstalling the application. The connection history is limited to 64 entries.</li>
+      <li>Fleet retains device, trial, and aggregate usage records while needed to provide access, maintain trial continuity, prevent abuse, or meet legal requirements. The current service does not promise automatic deletion after a fixed number of days.</li>
+      <li>Infrastructure and security records may be retained for operational or legal purposes according to the relevant provider's practices.</li>
+    </ul>
+
+    <p>
+      CryptoVPN does not currently require an email or password account. To
+      request access to or deletion of data associated with your device,
+      email <a href="mailto:vpnappcrypto@gmail.com">vpnappcrypto@gmail.com</a>.
+      We may request information needed to identify the correct device record
+      and prevent unauthorized deletion. Data will be deleted or de-identified
+      unless a legal or security reason requires retention.
+    </p>
+
+    <h2>9. Data security</h2>
+
+    <p>
+      CryptoVPN uses HTTPS for Fleet requests, Android platform storage and
+      Keystore protections for the local device credential, access controls
+      for service infrastructure, and encryption between the device and VPN
+      endpoint. No transmission or storage method guarantees absolute security.
+    </p>
+
+    <h2>10. Children</h2>
+
+    <p>
+      CryptoVPN is not specifically directed to children and does not
+      knowingly collect children's personal data. If you believe a child has
+      supplied personal data, contact us so we can review and address it.
+    </p>
+
+    <h2>11. Changes to this Policy</h2>
+
+    <p>
+      This Policy may change when application functionality, data practices,
+      or legal requirements change. An updated effective date and the current
+      text will be published on this page.
+    </p>
+
+    <h2>12. Contact</h2>
+
+    <p>
+      Service: CryptoVPN.<br>
+      Privacy contact: <a href="mailto:vpnappcrypto@gmail.com">vpnappcrypto@gmail.com</a>.
+    </p>
+  </main>
+</body>
+</html>
