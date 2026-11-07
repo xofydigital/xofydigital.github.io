@@ -1,229 +1,142 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light">
-  <title>CryptoVPN Privacy Policy</title>
+  <meta name="color-scheme" content="dark">
+  <title>Политика конфиденциальности CryptoVPN</title>
+  <style>
+    :root { color-scheme: dark; }
+    body {
+      margin: 0;
+      background: #141414;
+      color: #f0f0f0;
+      font: 1rem / 1.6 system-ui, sans-serif;
+    }
+    main { max-width: 48rem; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+    nav { display: flex; flex-wrap: wrap; gap: .75rem 1.25rem; margin-bottom: 2rem; }
+    h1, h2 { line-height: 1.25; }
+    h1 { font-size: clamp(1.5rem, 5vw, 2.25rem); }
+    h2 { font-size: 1.2rem; margin-top: 2rem; }
+    p { margin: .75rem 0; }
+    a { color: #c8dbff; overflow-wrap: anywhere; }
+    .revision { color: #bdbdbd; }
+    article + article { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #555; }
+  </style>
 </head>
 <body>
   <main>
-    <h1>CryptoVPN Privacy Policy</h1>
-
-    <p>Effective date: September 25, 2026.</p>
-
-    <p>
-      This Privacy Policy explains how the CryptoVPN Android application,
-      the CryptoVPN Fleet service, and participating VPN nodes access, use,
-      retain, and delete data. For privacy questions, contact
-      <a href="mailto:vpnappcrypto@gmail.com">vpnappcrypto@gmail.com</a>.
-    </p>
-
-    <h2>1. Application purpose</h2>
-
-    <p>
-      VPN connectivity is CryptoVPN's core function. When you choose to
-      connect, CryptoVPN uses Android VpnService to route eligible device
-      traffic through a selected VPN node. You can disconnect at any time.
-      Optional split-tunneling rules can route selected applications or domains
-      outside the tunnel. The application routes .ru and .su domains directly.
-    </p>
-
-    <h2>2. Data processed by CryptoVPN Fleet and VPN nodes</h2>
-
-    <h3>2.1. Device identity and access credentials</h3>
-
-    <p>
-      The application creates a random device ID and a separate secret for
-      authenticating requests to Fleet. The secret is protected in local
-      Android storage; Fleet stores a one-way digest of it. The application
-      also sends a SHA-256-derived value based on the app-scoped Android ID
-      so Fleet can recognize the same device after a normal reinstallation.
-      The original Android ID is not sent to Fleet. Fleet stores a keyed
-      digest of the derived value, not the value itself. These identifiers
-      are used for access control, trial continuity, and abuse prevention.
-    </p>
-
-    <p>
-      The derived identifier may remain the same after reinstallation when
-      the Android user and application signing key remain the same. It may
-      change after a factory reset, a change of Android user, or a change of
-      signing key. It is not an account name or an advertising identifier.
-    </p>
-
-    <h3>2.2. VPN access, trial, and usage</h3>
-
-    <p>Fleet and the selected VPN node may store:</p>
-
-    <ul>
-      <li>the device ID, account creation time, and last activity time;</li>
-      <li>the selected country, node, access status, and VPN peer assignment;</li>
-      <li>the trial start and reset or expiration times and traffic limit;</li>
-      <li>aggregate bytes transferred, used to show and enforce the trial limit;</li>
-      <li>technical VPN peer identifiers and connection state needed to provide the tunnel.</li>
-    </ul>
-
-    <p>
-      The current application displays plan options but does not process
-      payments or collect payment card details. This Policy must be updated
-      before payment processing is introduced.
-    </p>
-
-    <h3>2.3. Google Play Integrity, when enabled</h3>
-
-    <p>
-      The application supports Google Play Integrity. If this check is enabled
-      by Fleet, the application asks Google Play for a verification token;
-      Fleet sends that token to Google for verification. The verdict is used
-      to help identify an authentic application and device environment.
-      Fleet may issue a time-limited access confirmation after verification.
-      The verification token is not stored as a permanent device record in
-      Fleet's database.
-    </p>
-
-    <h3>2.4. Technical request data</h3>
-
-    <p>
-      When the application contacts Fleet or a VPN node, the source IP
-      address, request time, requested endpoint, response status, and error
-      information may be processed by the service and its infrastructure
-      providers to deliver requests, diagnose failures, and prevent abuse.
-      This information is not used to build advertising profiles.
-    </p>
-
-    <h2>3. Data processed on your device</h2>
-
-    <p>The application may store or process locally:</p>
-
-    <ul>
-      <li>the protected device credential and a time-limited integrity confirmation, if enabled;</li>
-      <li>language, notification, selected country, and split-tunneling preferences;</li>
-      <li>installed application names and package names displayed for app-based split tunneling;</li>
-      <li>domain rules entered for domain-based split tunneling;</li>
-      <li>connection history: node label, start time, duration, and aggregate traffic for up to 64 connections;</li>
-      <li>current VPN state, traffic counters, and node latency measurements.</li>
-    </ul>
-
-    <p>
-      The installed application list, selected application package names,
-      saved domain rules, and connection-history entries are not uploaded to
-      Fleet by the current application. Domain rules are applied by the local
-      tunnel, while DNS providers and requested services may still receive
-      the information needed to resolve and serve a requested domain.
-    </p>
-
-    <h2>4. VPN traffic and DNS</h2>
-
-    <p>
-      While connected, traffic covered by the VPN is encrypted between your
-      device and the selected VPN node. The node forwards it to the internet.
-      Traffic excluded by split tunneling, including .ru and .su domains, uses
-      a direct connection instead. DNS queries may be processed by the DNS
-      servers configured for the tunnel or by the device's direct network
-      resolver for excluded traffic. Fleet requests may use the direct network
-      so that the application can reach the service while the VPN is active.
-    </p>
-
-    <p>
-      Fleet records aggregate traffic usage, not the contents of messages,
-      files, or web pages. VPN nodes and network providers necessarily handle
-      connection metadata and traffic to route it. Requested websites, DNS
-      providers, and network operators may process data under their own
-      privacy practices. CryptoVPN does not redirect traffic for advertising
-      monetization.
-    </p>
-
-    <h2>5. Purposes of processing</h2>
-
-    <ul>
-      <li>provide and maintain VPN connectivity and server selection;</li>
-      <li>authenticate devices and restore access after reinstallation;</li>
-      <li>measure trial usage and enforce access limits;</li>
-      <li>apply user-selected split-tunneling settings;</li>
-      <li>show local connection history and VPN notifications;</li>
-      <li>secure and diagnose the service and prevent abuse;</li>
-      <li>comply with applicable legal obligations.</li>
-    </ul>
-
-    <h2>6. Disclosures and service providers</h2>
-
-    <p>
-      CryptoVPN does not sell user data or use advertising or third-party
-      analytics SDKs in the current application. Data needed to operate the
-      service may be processed by:
-    </p>
-
-    <ul>
-      <li>infrastructure providers hosting Fleet and VPN nodes;</li>
-      <li>Google, only when Play Integrity verification is enabled or when you use Google services independently;</li>
-      <li>DNS providers and websites or services you choose to access;</li>
-      <li>public authorities when disclosure is required by applicable law.</li>
-    </ul>
-
-    <p>
-      If you choose to email support, your email provider will process that
-      message under its own terms. The application does not automatically
-      send your support correspondence to Fleet.
-    </p>
-
-    <h2>7. Android permissions and capabilities</h2>
-
-    <ul>
-      <li>Internet and network-state access support Fleet requests, node checks, and the VPN connection.</li>
-      <li>VpnService creates the device VPN tunnel after Android's VPN permission flow.</li>
-      <li>Foreground Service keeps an active VPN session running.</li>
-      <li>Notifications show the connection state, duration, and aggregate traffic when permitted.</li>
-      <li>Launcher-app visibility lets you choose applications for local split tunneling.</li>
-    </ul>
-
-    <h2>8. Retention and deletion</h2>
-
-    <ul>
-      <li>Local settings and history remain until overwritten, cleared with application data, or removed by uninstalling the application. The connection history is limited to 64 entries.</li>
-      <li>Fleet retains device, trial, and aggregate usage records while needed to provide access, maintain trial continuity, prevent abuse, or meet legal requirements. The current service does not promise automatic deletion after a fixed number of days.</li>
-      <li>Infrastructure and security records may be retained for operational or legal purposes according to the relevant provider's practices.</li>
-    </ul>
-
-    <p>
-      CryptoVPN does not currently require an email or password account. To
-      request access to or deletion of data associated with your device,
-      email <a href="mailto:vpnappcrypto@gmail.com">vpnappcrypto@gmail.com</a>.
-      We may request information needed to identify the correct device record
-      and prevent unauthorized deletion. Data will be deleted or de-identified
-      unless a legal or security reason requires retention.
-    </p>
-
-    <h2>9. Data security</h2>
-
-    <p>
-      CryptoVPN uses HTTPS for Fleet requests, Android platform storage and
-      Keystore protections for the local device credential, access controls
-      for service infrastructure, and encryption between the device and VPN
-      endpoint. No transmission or storage method guarantees absolute security.
-    </p>
-
-    <h2>10. Children</h2>
-
-    <p>
-      CryptoVPN is not specifically directed to children and does not
-      knowingly collect children's personal data. If you believe a child has
-      supplied personal data, contact us so we can review and address it.
-    </p>
-
-    <h2>11. Changes to this Policy</h2>
-
-    <p>
-      This Policy may change when application functionality, data practices,
-      or legal requirements change. An updated effective date and the current
-      text will be published on this page.
-    </p>
-
-    <h2>12. Contact</h2>
-
-    <p>
-      Service: CryptoVPN.<br>
-      Privacy contact: <a href="mailto:vpnappcrypto@gmail.com">vpnappcrypto@gmail.com</a>.
-    </p>
+    <nav aria-label="Язык / Language">
+      <a href="#ru" lang="ru">Русский</a>
+      <a href="#en" lang="en">English</a>
+    </nav>
+    <article id="ru" lang="ru">
+      <h1>Политика конфиденциальности CryptoVPN</h1>
+      <p class="revision">Редакция от 7 ноября 2026 года</p>
+      <p>Политика в отношении обработки персональных данных действует для приложения CryptoVPN для Android, VPN-сервиса и обращений к оператору. Она распространяется на пользователей приложения, плательщиков и лиц, обращающихся в поддержку или с запросом о персональных данных. Реквизиты оператора приведены в конце документа.</p>
+      <section>
+        <h2>1. Доступ к VPN и пробный период</h2>
+        <p>Для выдачи и восстановления доступа, учёта пробного периода и применения лимитов CryptoVPN обрабатывает идентификатор устройства, производные значения Android ID, данные аутентификации, даты регистрации и последней активности, выбранную страну и сервер, состояние доступа, идентификаторы VPN-подключения, даты пробного периода и суммарный объём трафика.</p>
+        <p>Данные, необходимые для подключения и учёта доступа, обрабатываются для заключения и исполнения договора по инициативе пользователя (п. 5 ч. 1 ст. 6 Федерального закона № 152-ФЗ). Данные доступа хранятся, пока они нужны для предоставления или восстановления доступа, учёта пробного периода либо для отдельно обоснованной цели защиты сервиса.</p>
+      </section>
+      <section>
+        <h2>2. Оплата, подписка и чеки</h2>
+        <p>Для создания и сверки платежа и активации подписки CryptoVPN обрабатывает идентификаторы устройства, заказа и платежа, выбранный тариф, сумму, валюту, статус и срок подписки. Оплата через ЮKassa или 2328 открывается в браузере. Реквизиты платёжного средства пользователь вводит на странице платёжного сервиса.</p>
+        <p>При оплате через ЮKassa можно указать email для отправки чека. Если вы его укажете, CryptoVPN получит его вместе с данными заказа и использует для доставки чека через почтового провайдера. Для формирования налогового чека может использоваться сервис ФНС России «Мой налог».</p>
+        <p>Основания обработки — исполнение договора, включая доставку запрошенного чека, и выполнение применимых обязанностей по закону (п. 5 и 2 ч. 1 ст. 6 152-ФЗ). Данные заказа хранятся на период обслуживания подписки, сверки платежа и рассмотрения связанных обращений. Email для чека используется для доставки и связанных с ней обращений. Документы и сведения, которые требуется сохранять по закону, хранятся в течение установленных им сроков.</p>
+      </section>
+      <section>
+        <h2>3. VPN-трафик, диагностика и безопасность</h2>
+        <p>Android VpnService создаёт зашифрованный туннель между устройством и выбранным VPN-сервером. Сервер пересылает трафик в интернет и обрабатывает данные соединения, необходимые для маршрутизации. DNS-запросы могут обрабатываться настроенным DNS-провайдером. Трафик, исключённый настройками раздельного туннелирования, идёт напрямую.</p>
+        <p>Для диагностики и защиты сервиса могут обрабатываться исходный IP-адрес, время и адрес запроса, статус ответа, сведения об ошибках, технические параметры подключения и связанные идентификаторы. Для маршрутизации и диагностики основанием может служить исполнение договора. Для защиты от злоупотреблений — законный интерес оператора при соблюдении прав пользователя (п. 5 и 7 ч. 1 ст. 6 152-ФЗ). Технические записи хранятся на период диагностики, расследования и предотвращения соответствующих нарушений с учётом обязательных сроков хранения, если они применимы.</p>
+        <p>Если включена проверка Play Integrity, Google обрабатывает проверочный токен, а CryptoVPN использует результат для проверки подлинности приложения и среды устройства. При установке обновлений и показе формы оценки применяются соответствующие сервисы Google Play.</p>
+      </section>
+      <section>
+        <h2>4. Данные на устройстве</h2>
+        <p>Приложение обрабатывает на устройстве настройки, список запускаемых приложений и выбранные правила раздельного туннелирования, состояние VPN, историю до 64 подключений, показатели трафика и измерения задержки. Данные аутентификации хранятся с использованием механизмов защиты Android. Локальные данные сохраняются до перезаписи, очистки данных приложения или удаления приложения.</p>
+      </section>
+      <section>
+        <h2>5. Обращения и запросы</h2>
+        <p>При обращении CryptoVPN обрабатывает адрес отправителя, содержание обращения, приложенные материалы и сведения, необходимые для поиска записи и проверки полномочий заявителя. Эти данные используются для ответа, решения вопроса и исполнения обязанностей оператора (п. 2, 5 или 7 ч. 1 ст. 6 152-ФЗ в зависимости от обращения). Переписка хранится до завершения рассмотрения и далее на срок, необходимый для исполнения закона или рассмотрения связанного спора.</p>
+      </section>
+      <section>
+        <h2>6. Способы обработки и получатели</h2>
+        <p>Обработка включает получение, запись, хранение, уточнение, использование, предоставление, блокирование и уничтожение данных. Приложение и серверы обрабатывают данные автоматически. Сотрудники или уполномоченные лица могут обрабатывать обращения вручную.</p>
+        <p>Данные могут получать поставщики хостинга и VPN-узлов для работы инфраструктуры, DNS-провайдеры для разрешения имён, ЮKassa и 2328 для проведения платежей, ФНС России для формирования налоговых чеков, почтовые провайдеры для чеков и обращений, Google для функций Google Play. Государственные органы получают сведения при наличии установленного законом основания. При поручении обработки объём данных, цели и меры защиты определяются договором и законом.</p>
+        <p>При выборе зарубежного VPN-узла через него проходят IP-адрес и трафик в объёме, необходимом для подключения и маршрутизации. Обработка почтовыми и другими провайдерами также может происходить за пределами России в зависимости от получателя. К локализации данных граждан РФ и трансграничной передаче применяются ч. 5 ст. 18 и ст. 12 152-ФЗ соответственно.</p>
+      </section>
+      <section>
+        <h2>7. Защита, прекращение обработки и уничтожение</h2>
+        <p>CryptoVPN использует HTTPS для запросов к сервису, шифрование VPN-туннеля, механизмы защиты Android для локальных данных доступа и разграничение доступа к инфраструктуре.</p>
+        <p>По достижении цели обработки или отзыве согласия, когда оно служит основанием, оператор прекращает соответствующую обработку и уничтожает данные в предусмотренных законом случаях, как правило, в течение 30 дней. Если применимо иное законное основание, сохраняются данные, необходимые для соответствующей цели, на предусмотренный для неё срок. При невозможности уничтожить данные в установленный срок применяются блокирование и порядок уничтожения по ст. 21 152-ФЗ. Удаление приложения очищает локальные данные. Для удаления серверной записи направьте запрос оператору.</p>
+      </section>
+      <section>
+        <h2>8. Ваши права</h2>
+        <p>Вы можете запросить сведения об обработке и доступ к данным, потребовать их уточнения, блокирования, уничтожения или прекращения обработки в предусмотренных законом случаях, отозвать ранее данное согласие и обжаловать действия оператора в Роскомнадзоре или в суде.</p>
+        <p>Направьте запрос по электронной почте или по адресу из раздела ниже. Укажите, какое право вы хотите осуществить, и сведения, достаточные для поиска вашей записи. Оператор может запросить необходимые сведения для проверки личности или полномочий представителя. Пароль, секрет устройства, банковские коды и полный номер карты для запроса не нужны. Сведения о персональных данных предоставляются в течение 10 рабочих дней с возможным мотивированным продлением до 5 рабочих дней. Иные сроки зависят от вида запроса и определяются ст. 14, 20 и 21 152-ФЗ.</p>
+      </section>
+      <section>
+        <h2>9. Оператор и контакты</h2>
+        <p>Индивидуальный предприниматель Шевелев Анатолий Алексеевич</p>
+        <p>Адрес для обращений — 664007, Россия, Иркутская область, Иркутск, Пограничный, 4-20.</p>
+        <p>Телефон — <a href="tel:+79964373684">+79964373684</a></p>
+        <p>Электронная почта — <a href="mailto:vpnappcrypto@gmail.com">vpnappcrypto@gmail.com</a></p>
+      </section>
+    </article>
+    <article id="en" lang="en">
+      <h1>CryptoVPN Privacy Policy</h1>
+      <p class="revision">Revision dated November 7, 2026</p>
+      <p>This personal data processing policy covers the CryptoVPN Android app, the VPN service, and requests to the operator. It applies to app users, payers, and people who contact support or submit a personal data request. The operator’s details appear at the end of this document.</p>
+      <section>
+        <h2>1. VPN access and trial</h2>
+        <p>To provide and restore access, track trial usage, and apply limits, CryptoVPN processes the device identifier, values derived from Android ID, authentication data, registration and last activity times, selected country and server, access status, VPN connection identifiers, trial dates, and aggregate traffic usage.</p>
+        <p>Data required for connection and access is processed to enter into and perform a contract at the user’s request under Article 6(1)(5) of Russian Federal Law No. 152-FZ. Access data is kept while needed to provide or restore access, administer the trial, or serve a separately justified security purpose.</p>
+      </section>
+      <section>
+        <h2>2. Payments, subscriptions, and receipts</h2>
+        <p>To create and verify payments and activate subscriptions, CryptoVPN processes device, order, and payment identifiers, the selected plan, amount, currency, status, and subscription duration. YooKassa or 2328 checkout opens in a browser. Users enter payment credentials on the payment provider’s page.</p>
+        <p>For YooKassa payments, you can enter an email address to receive a receipt. If you provide it, CryptoVPN receives it with the order details and uses it to deliver the receipt through a mail provider. Russia’s Federal Tax Service may issue the tax receipt through its My Tax service.</p>
+        <p>The legal bases are performance of the contract, including delivery of a requested receipt, and compliance with applicable legal obligations under Article 6(1)(5) and (2) of Law No. 152-FZ. Order data is kept for subscription administration, payment reconciliation, and related inquiries. The receipt email is used for delivery and related inquiries. Records subject to statutory retention are kept for the periods set by law.</p>
+      </section>
+      <section>
+        <h2>3. VPN traffic, diagnostics, and security</h2>
+        <p>Android VpnService creates an encrypted tunnel between your device and the selected VPN server. The server forwards traffic to the internet and processes the connection data needed for routing. The configured DNS provider may process DNS queries. Traffic excluded by split-tunneling settings takes a direct route.</p>
+        <p>Diagnostics and service protection may involve processing the source IP address, request time and destination, response status, error information, connection parameters, and associated identifiers. Routing and diagnostics may rely on contract performance. Abuse prevention may rely on the operator’s legitimate interests, subject to user rights, under Article 6(1)(5) and (7) of Law No. 152-FZ. Technical records are kept for the period needed to diagnose, investigate, and prevent the relevant incidents, subject to applicable statutory retention.</p>
+        <p>If Play Integrity verification is enabled, Google processes the verification token and CryptoVPN uses the result to check the authenticity of the app and device environment. The relevant Google Play services handle app updates and review prompts.</p>
+      </section>
+      <section>
+        <h2>4. Data on your device</h2>
+        <p>The app processes settings, the list of launchable apps and selected split-tunneling rules, VPN status, up to 64 connection history entries, traffic counters, and latency measurements on your device. Android security mechanisms protect locally stored authentication data. Local data remains until it is overwritten, you clear app data, or you uninstall the app.</p>
+      </section>
+      <section>
+        <h2>5. Inquiries and requests</h2>
+        <p>When you contact CryptoVPN, it processes the sender’s address, the message, any attachments, and information needed to find the record and verify the requester’s authority. The data is used to respond, resolve the issue, and meet the operator’s obligations, under Article 6(1)(2), (5), or (7) of Law No. 152-FZ, depending on the inquiry. Correspondence is kept until the inquiry is resolved and then for as long as necessary to comply with the law or resolve a related dispute.</p>
+      </section>
+      <section>
+        <h2>6. Processing methods and recipients</h2>
+        <p>Processing includes receiving, recording, storing, updating, using, providing, blocking, and destroying data. The app and servers process data automatically. Staff or authorized persons may process inquiries manually.</p>
+        <p>Hosting and VPN node providers may receive data to run the infrastructure, DNS providers to resolve names, YooKassa and 2328 to process payments, Russia’s Federal Tax Service to issue tax receipts, mail providers to deliver receipts and handle correspondence, and Google to provide Google Play features. Authorities receive information when legally required. Where processing is delegated, the scope, purposes, and safeguards are defined by the contract and applicable law.</p>
+        <p>If you select a VPN node abroad, it receives the IP address and traffic needed to establish the connection and route traffic. Mail and other providers may also process data outside Russia, depending on the recipient. Article 18(5) and Article 12 of Law No. 152-FZ govern localization of Russian citizens’ personal data and cross-border transfers, respectively.</p>
+      </section>
+      <section>
+        <h2>7. Security, ending processing, and destruction</h2>
+        <p>CryptoVPN uses HTTPS for service requests, VPN tunnel encryption, Android security mechanisms for local credentials, and infrastructure access controls.</p>
+        <p>When a processing purpose is fulfilled or consent serving as the legal basis is withdrawn, the operator ends the relevant processing and destroys the data when required by law, generally within 30 days. Where another legal basis applies, the operator retains data necessary for that purpose for the applicable period. If destruction is impossible within the required period, the operator blocks the data and follows the destruction procedure under Article 21 of Law No. 152-FZ. Uninstalling the app clears local data. To delete a server-side record, send the operator a request.</p>
+      </section>
+      <section>
+        <h2>8. Your rights</h2>
+        <p>You may request information about processing and access to your data, request correction, blocking, destruction, or an end to processing in cases provided by law, withdraw consent you previously gave, and challenge the operator’s actions before Roskomnadzor or a court.</p>
+        <p>Send your request by email or to the postal address below. State which right you wish to exercise and provide enough information to locate your record. The operator may request information necessary to verify your identity or a representative’s authority. A password, device secret, banking codes, and a full card number are unnecessary for the request. Personal data information is provided within 10 working days, with a justified extension of up to 5 working days. Other deadlines depend on the request and follow Articles 14, 20, and 21 of Law No. 152-FZ.</p>
+      </section>
+      <section>
+        <h2>9. Operator and contact details</h2>
+        <p>Individual entrepreneur Shevelev Anatoli Alekseevich</p>
+        <p>Postal address — 4-20, Pogranichny, Irkutsk, Irkutsk Region, Russia, 664007.</p>
+        <p>Phone — <a href="tel:+79964373684">+79964373684</a></p>
+        <p>Email — <a href="mailto:vpnappcrypto@gmail.com">vpnappcrypto@gmail.com</a></p>
+      </section>
+    </article>
   </main>
 </body>
 </html>
+
