@@ -1,277 +1,157 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light">
-  <title>HappVPN Privacy Policy</title>
+  <title>HappVPN — Политика конфиденциальности / Privacy Policy</title>
+  <link rel="canonical" href="https://xofydigital.github.io/happvpnapp_privacypolicy.html">
 </head>
 <body>
   <main>
-    <h1>HappVPN Privacy Policy</h1>
-
-    <p>Effective date: July 31, 2026.</p>
-
-    <p>
-      This Privacy Policy explains how the HappVPN Android application and the
-      HappVPN backend access, collect, use, disclose, retain, and delete user
-      and device data.
-    </p>
-
-    <p>
-      Operator: ANATOLY ALEKSEEVICH SHEVELEV.
-      Taxpayer Identification Number: 381117785055.
-      Privacy email: happvpnapp@gmail.com.
-      Telephone: +79964373684.
-    </p>
-
-    <h2>1. Application purpose</h2>
-
-    <p>
-      VPN is the core functionality of HappVPN. Following a user action,
-      HappVPN uses Android VpnService to route all device traffic or traffic
-      from user-selected applications through a selected VPN endpoint. The user
-      can disconnect the VPN at any time.
-    </p>
-
-    <h2>2. Data collected by the HappVPN backend</h2>
-
-    <h3>2.1. Pseudonymous device identifier</h3>
-
-    <p>
-      The application creates a device identifier by applying SHA-256 to the
-      app-scoped Android ID. The original Android ID is not transmitted to the
-      HappVPN backend. The pseudonymous identifier is used for access
-      verification, trial usage, subscriptions, payments, abuse prevention,
-      and one-time migration of a previously purchased subscription.
-    </p>
-
-    <p>
-      The identifier may survive reinstallation for the same Android user,
-      application package, and signing key. It may change after a factory reset,
-      a change of Android user, or a change of the application signing key.
-    </p>
-
-    <h3>2.2. Play Integrity</h3>
-
-    <p>
-      Distributed release builds use Google Play Integrity to verify the
-      application and device environment. Google receives the Play Integrity
-      request. The HappVPN backend receives an encrypted token and submits it to
-      Google for verification. The result is used only to protect access to VPN
-      servers, trials, subscriptions, and payments. The Play Integrity token is
-      not stored as a permanent record in the HappVPN database.
-    </p>
-
-    <h3>2.3. Trial access, subscriptions, and payments</h3>
-
-    <p>The HappVPN backend may store:</p>
-
-    <ul>
-      <li>the trial usage date and the number of seconds used;</li>
-      <li>the subscription expiration date and the last payment date;</li>
-      <li>the selected plan and access period;</li>
-      <li>the payment amount, currency, status, and timestamps;</li>
-      <li>the payment provider and transaction identifier;</li>
-      <li>the email address provided for receipt delivery;</li>
-      <li>receipt generation and delivery status.</li>
-    </ul>
-
-    <p>
-      The current version does not require a Google account. An email address
-      is required only when starting a YooKassa purchase so that the receipt
-      can be delivered. HappVPN does not receive or store full card numbers,
-      CVC/CVV codes, banking passwords, or cryptocurrency wallet private keys.
-      Users enter such information directly on the payment provider's service.
-    </p>
-
-    <p>
-      For one-time migration of an older subscription, the application may send
-      a signed legacy session token to the backend. The contained identifier is
-      used only to transfer the remaining subscription period to the current
-      pseudonymous device identifier. The token is deleted from local
-      application storage after successful migration.
-    </p>
-
-    <h3>2.4. Technical request data</h3>
-
-    <p>
-      When a device contacts the HappVPN API and infrastructure, the IP address,
-      request date and time, requested method, response code, client type, and
-      error details may be processed. This information is used to deliver
-      responses, secure and diagnose the service, and prevent abuse. It is not
-      used for advertising or advertising profiles.
-    </p>
-
-    <h2>3. Data processed only on the device</h2>
-
-    <p>The application may process and store locally:</p>
-
-    <ul>
-      <li>language, theme, and other application preferences;</li>
-      <li>the VPN server list and server availability test results;</li>
-      <li>the last connection and VPN state;</li>
-      <li>notification and trial state;</li>
-      <li>local error logs limited to 256 KB;</li>
-      <li>
-        the installed application list and selected package names used for
-        split tunneling.
-      </li>
-    </ul>
-
-    <p>
-      The installed application list and split-tunneling selections are not
-      sent to the HappVPN backend. Local error logs are not uploaded
-      automatically. Users can view or clear them in the application.
-    </p>
-
-    <h2>4. VPN traffic and DNS</h2>
-
-    <p>
-      When the VPN is enabled, network traffic is sent through the selected VPN
-      endpoint to websites and services requested by the user. Domain
-      resolution may use the system DNS resolver or Cloudflare's encrypted DNS
-      service at https://1.1.1.1/dns-query. Transmission from the device to the
-      VPN endpoint is protected by the selected VPN protocol and configuration.
-    </p>
-
-    <p>
-      The HappVPN application and API do not collect or retain the contents of
-      VPN traffic, browsing history, search queries, messages, or the contents
-      of transferred files. The selected VPN endpoint operator, DNS provider,
-      and requested internet services may technically process traffic under
-      their own privacy practices.
-    </p>
-
-    <p>
-      HappVPN does not redirect or manipulate traffic from other applications
-      for advertising or advertising monetization.
-    </p>
-
-    <h2>5. Purposes of processing</h2>
-
-    <p>Data is used only to:</p>
-
-    <ul>
-      <li>provide and maintain the VPN connection;</li>
-      <li>provide server selection and split tunneling;</li>
-      <li>verify access and provide trial usage;</li>
-      <li>create, verify, and restore payments and subscriptions;</li>
-      <li>generate and deliver receipts for YooKassa payments;</li>
-      <li>verify distributed release builds;</li>
-      <li>provide VPN and subscription notifications;</li>
-      <li>secure and diagnose the service and prevent abuse;</li>
-      <li>comply with applicable law.</li>
-    </ul>
-
-    <h2>6. Data disclosures and service providers</h2>
-
-    <p>
-      HappVPN does not sell user data, disclose it to advertising networks, or
-      use advertising or third-party analytics SDKs. Information required to
-      provide the service may be disclosed to:
-    </p>
-
-    <ul>
-      <li>Google for Play Integrity verification;</li>
-      <li>YooKassa and Heleket for payment creation and verification;</li>
-      <li>
-        the Russian Federal Tax Service's My Tax service for YooKassa receipt
-        generation and the configured mail provider for receipt delivery;
-      </li>
-      <li>infrastructure providers that host the HappVPN API and database;</li>
-      <li>
-        selected VPN endpoints, DNS providers, and requested internet services
-        while the VPN is active;
-      </li>
-      <li>public authorities when disclosure is required by applicable law.</li>
-    </ul>
-
-    <h2>7. Android permissions</h2>
-
-    <ul>
-      <li>
-        Internet, Network State, and Wi-Fi State are used for API access,
-        network checks, and VPN connections.
-      </li>
-      <li>VpnService is used to create the VPN tunnel.</li>
-      <li>Foreground Service is used to maintain an active VPN connection.</li>
-      <li>Notifications are used for VPN, trial, and subscription status.</li>
-      <li>Vibrate provides tactile feedback for selected actions.</li>
-      <li>
-        Query All Packages is used only to let users select applications for
-        split tunneling.
-      </li>
-    </ul>
-
-    <h2>8. Retention and deletion</h2>
-
-    <ul>
-      <li>
-        Local data remains until it is cleared in the application, Android
-        application data is cleared, or the application is uninstalled.
-      </li>
-      <li>Trial usage records are deleted by the backend after 7 days.</li>
-      <li>
-        Successful payment transactions are generally removed from the
-        operational database after 120 days. Unpaid or canceled transactions
-        are generally removed after 3 days once any necessary status check is
-        complete.
-      </li>
-      <li>
-        The pseudonymous identifier and subscription state are retained while
-        necessary to provide or restore access, prevent abuse, or meet legal
-        obligations.
-      </li>
-      <li>
-        Certain payment and fiscal records may be retained longer when required
-        by law.
-      </li>
-    </ul>
-
-    <p>
-      HappVPN does not create a user account. To request deletion of backend
-      data, send a request to happvpnapp@gmail.com. The Operator may request
-      information needed to locate the data and protect it against deletion by
-      an unauthorized person. Verified data will be deleted or de-identified
-      unless retention is required by law.
-    </p>
-
-    <h2>9. Data security</h2>
-
-    <p>
-      HappVPN uses HTTPS for communication with its API, access controls for
-      server infrastructure, a pseudonymous identifier instead of the original
-      Android ID, Play Integrity for release builds, and Android platform
-      protections. No transmission or storage method can guarantee absolute
-      security.
-    </p>
-
-    <h2>10. Children</h2>
-
-    <p>
-      HappVPN is not specifically directed to children and does not knowingly
-      collect children's personal data. If the Operator learns that a child's
-      data was collected without required parental consent, it will be deleted
-      unless another lawful basis requires retention.
-    </p>
-
-    <h2>11. Changes to this Policy</h2>
-
-    <p>
-      This Policy may be updated when application functionality, data practices,
-      or legal requirements change. The current text and a new effective date
-      will be published on this page.
-    </p>
-
-    <h2>12. Contact</h2>
-
-    <p>
-      Data operator: ANATOLY ALEKSEEVICH SHEVELEV.
-      Taxpayer Identification Number: 381117785055.
-      Email: happvpnapp@gmail.com.
-      Telephone: +79964373684.
-    </p>
+    <nav aria-label="Язык политики / Policy language">
+      <a href="#ru" hreflang="ru">Русский</a>
+      <a href="#en" lang="en" hreflang="en">English</a>
+    </nav>
+    <article id="ru" lang="ru" aria-labelledby="title-ru">
+      <header>
+        <h1 id="title-ru">Политика конфиденциальности HappVPN</h1>
+        <p><time datetime="2026-11-08">Редакция от 8 ноября 2026 года</time></p>
+      </header>
+      <section aria-labelledby="ru-1">
+        <h2 id="ru-1">1. Область действия</h2>
+        <p>Политика относится к Android-приложению HappVPN, его серверной части и обращениям в поддержку. Она охватывает пользователей, плательщиков и заявителей. Ознакомление с Политикой не является согласием на обработку данных. Если конкретная операция требует согласия, оно оформляется отдельно.</p>
+      </section>
+      <section aria-labelledby="ru-2">
+        <h2 id="ru-2">2. Какие данные обрабатываются</h2>
+        <p>Доступ и подписка. HappVPN создаёт псевдонимный идентификатор устройства из Android ID, выделенного приложению, с помощью SHA-256. Исходный Android ID на сервер не передаётся. Вместе с идентификатором могут храниться день и длительность использования пробного доступа, состояние и сроки подписки, дата создания записи и время последней активности и статус бонуса. При переносе старой подписки может однократно проверяться прежний токен HappVPN. Для текущего доступа вход через Google не требуется.</p>
+        <p>Платежи. HappVPN обрабатывает тариф, сумму, валюту, провайдера, идентификаторы заказа и платежа, статус и даты операции, а также сведения о формировании и доставке чека. Страница ЮKassa или 2328.io открывается в браузере. Перед оплатой через ЮKassa приложение запрашивает email для отправки чека. Он сохраняется вместе с записью платежа и используется для доставки чека и обработки связанных с ней обращений. Полные данные карты и банковские коды вводятся в интерфейсе платёжного провайдера, HappVPN их не получает.</p>
+        <p>Технические данные. При обращениях к API, VPN-узлам и проверочным адресам технически обрабатываются IP-адрес, время и адрес запроса, код ответа, параметры соединения, связанные идентификаторы и сведения об ошибках. Для доставки push-уведомлений HappVPN может регистрировать токен Firebase Cloud Messaging вместе с идентификатором устройства, языком и состоянием уведомлений. Сборки, использующие Play Integrity, получают токен проверки через Google и передают его серверу для верификации. Некоторые релизы используют другую схему авторизации API и не запрашивают токен Play Integrity. Соответствующие сервисы Google Play используются для проверки и установки обновлений и показа формы оценки приложения.</p>
+        <p>Поддержка. При обращении оператор получает контакт отправителя, содержание сообщения и вложения, которые отправитель решил предоставить. Данные обращения нужны для ответа, решения вопроса и исполнения обязанностей оператора. Основание зависит от цели обращения и определяется п. 2, 5 или 7 ч. 1 ст. 6 Закона № 152-ФЗ. Для поиска записи и защиты от выдачи данных постороннему оператор может запросить соразмерное подтверждение личности или полномочий.</p>
+      </section>
+      <section aria-labelledby="ru-3">
+        <h2 id="ru-3">3. Цели, основания и способы обработки</h2>
+        <p>Данные, необходимые для предоставления VPN, пробного доступа, подписки, выбранного способа оплаты и поддержки по услуге, обрабатываются для заключения и исполнения договора по инициативе пользователя (п. 5 ч. 1 ст. 6 Федерального закона № 152-ФЗ). Данные для чеков, исполнения обязательных требований и ответов на законные запросы обрабатываются на основании закона, когда это применимо (п. 2 ч. 1 ст. 6).</p>
+        <p>Для диагностики, защиты сервиса и предупреждения злоупотреблений оператор может обрабатывать необходимые технические данные при соблюдении прав пользователя (п. 7 ч. 1 ст. 6). Если для отдельной цели правовым основанием служит согласие, оператор получает его отдельно и использует данные в пределах этого согласия.</p>
+        <p>Обработка ведётся автоматически в приложении и на сервере, а обращения могут разбираться вручную. В зависимости от цели данные собираются, записываются, хранятся, уточняются, используются, предоставляются необходимым получателям, блокируются или уничтожаются. HappVPN не продаёт персональные данные и не передаёт их рекламным сетям для профилирования.</p>
+      </section>
+      <section aria-labelledby="ru-4">
+        <h2 id="ru-4">4. VPN, DNS и данные на устройстве</h2>
+        <p>В режиме VPN Android VpnService создаёт туннель между устройством и выбранным узлом. Трафик приложений, исключённых настройками раздельного туннелирования, идёт напрямую. Защита пути до узла зависит от протокола и настроек. Узлу доступны данные, необходимые для маршрутизации, включая исходный IP, адрес назначения, сетевые параметры и трафик в пределах возможностей протокола. HTTPS-содержимое остаётся защищённым между приложением и конечным ресурсом. База подписок HappVPN не предназначена для хранения истории посещений или содержимого трафика. Сторонние VPN-узлы могут вести собственные технические журналы.</p>
+        <p>DNS-сервисы и контрольные адреса получают запросы при разрешении имён и проверках связи. В зависимости от настроек запросы могут получать Cloudflare, Google, Microsoft и ресурсы, которые пользователь выбрал для проверок. Такие получатели могут видеть IP-адрес запроса и технические параметры. Email для чека и сведения о подписке им для этих целей не отправляются.</p>
+        <p>Настройки, список установленных приложений для раздельного туннелирования, избранное, результаты проверок, состояние VPN, счётчики принятого и переданного трафика и журналы приложения обрабатываются на устройстве. Конфигурация последнего соединения хранится на устройстве для повторного подключения. В сборках с Play Integrity сохранённая сессия доступа шифруется с ключом Android Keystore. Список приложений не отправляется на API HappVPN. При обращении в поддержку пользователь может сам передать часть этих данных. HappVPN не запрашивает разрешение на точное местоположение.</p>
+      </section>
+      <section aria-labelledby="ru-5">
+        <h2 id="ru-5">5. Получатели данных</h2>
+        <p>Хостинг серверной инфраструктуры HappVPN предоставляет 4VPS. Другие получатели в пределах своей функции — владельцы сторонних VPN-узлов, DNS и проверочных сервисов для соединения; Google для Firebase Cloud Messaging, Play Integrity в использующих его сборках, обновлений и формы оценки Google Play; ЮKassa и 2328.io для выбранной оплаты; ФНС России через «Мой налог» для формирования налоговых чеков; Google (Gmail) для отправки чеков и обработки электронной переписки. Сведения могут предоставляться уполномоченным органам в случаях, предусмотренных законом.</p>
+        <p>ЮKassa и 2328.io могут самостоятельно получать данные, которые пользователь вводит на их платёжных страницах. При оплате через ЮKassa данные операции передаются в «Мой налог» для формирования чека, а Gmail получает адрес получателя, данные платежа и чек для доставки. При поручении обработки оператор определяет её цели, данные, операции и требования к конфиденциальности и безопасности по ч. 3 ст. 6 Закона № 152-ФЗ.</p>
+      </section>
+      <section aria-labelledby="ru-6">
+        <h2 id="ru-6">6. Локализация и трансграничная передача</h2>
+        <p>При сборе данных граждан РФ к используемым базам данных применяются требования ч. 5 ст. 18 Закона № 152-ФЗ. При выборе зарубежного VPN-узла через него проходят исходный IP-адрес и трафик, необходимые для подключения и маршрутизации. Использование внешних DNS, Google, Gmail, международных платёжных сервисов и инфраструктуры может включать обработку за пределами России. Страна на карточке узла обозначает заявленное расположение узла.</p>
+        <p>До начала трансграничной передачи, которую организует оператор, применяются требования ст. 12 Закона № 152-ФЗ, включая отдельное уведомление Роскомнадзора и соблюдение применимых ограничений. Сведения о получателях и об осуществлённой или предполагаемой трансграничной передаче предоставляются по запросу в объёме, установленном ст. 14.</p>
+      </section>
+      <section aria-labelledby="ru-7">
+        <h2 id="ru-7">7. Сроки хранения и уничтожение</h2>
+        <p>Серверная очистка применяет пороги 7 дней к записям использования пробного доступа, 90 дней к успешным операциям и 3 дня к прочим операциям. Операция может оставаться на сверке до получения статуса от провайдера. Для неактивных записей подписки, отвечающих условиям очистки, применяется порог 90 дней. Записи с незавершёнными операциями, действующей подпиской или отмеченным бонусом могут храниться для учёта и восстановления доступа. Эти сроки относятся к записям HappVPN; платёжные, налоговые и иные документы могут храниться по отдельным обязательным срокам.</p>
+        <p>Регистрация push хранится для доставки уведомлений и обновляется при смене токена; недействительные токены удаляются при получении соответствующего ответа от Firebase. Отключение уведомлений останавливает отправку после обновления настроек на сервере. Переписка хранится до завершения рассмотрения и далее, если этого требует закон или нужно разрешить связанный спор. Технические записи хранятся на период, необходимый для диагностики, расследования и предупреждения соответствующих инцидентов, с учётом применимых обязательных сроков.</p>
+        <p>После достижения цели или отзыва согласия, если оно было основанием, оператор прекращает соответствующую обработку и уничтожает данные в предусмотренных ст. 21 Закона № 152-ФЗ случаях, как правило, не позднее 30 дней. При наличии другого законного основания сохраняются только нужные для него сведения. Если уничтожение в установленный срок невозможно, оператор блокирует данные и уничтожает их не позднее шести месяцев, если федеральный закон не устанавливает иной срок.</p>
+        <p>Локальные данные сохраняются до перезаписи, очистки данных приложения или его удаления. Для удаления серверных данных направьте запрос оператору.</p>
+      </section>
+      <section aria-labelledby="ru-8">
+        <h2 id="ru-8">8. Ваши права и обращения</h2>
+        <p>Вы можете получить информацию об обработке и доступ к своим данным, потребовать уточнения, блокирования, прекращения обработки или уничтожения при наличии оснований, отозвать ранее данное отдельное согласие и обжаловать действия оператора в Роскомнадзоре или суде.</p>
+        <p>Напишите оператору по электронному или почтовому адресу либо позвоните по номеру из раздела «<a href="#ru-11">Оператор и контакты</a>» в конце политики. Укажите, какое право вы хотите осуществить и, если это необходимо для поиска записи, укажите email чека или номер операции. Запрос о предоставлении сведений оформляется по ч. 3 ст. 14 Закона № 152-ФЗ. Никогда не присылайте пароли, ключи VPN, банковские коды и полный номер карты.</p>
+        <p>На запрос о доступе оператор отвечает в течение 10 рабочих дней. Срок может быть продлён максимум на 5 рабочих дней с мотивированным уведомлением. Для исправления, прекращения обработки и уничтожения применяются сроки ст. 20 и 21 Закона № 152-ФЗ.</p>
+      </section>
+      <section aria-labelledby="ru-9">
+        <h2 id="ru-9">9. Защита данных</h2>
+        <p>Обращения к основному и резервному API защищены HTTPS с проверкой сертификата. Сервер проверяет авторизацию запросов к защищённым разделам. Приложение использует изоляцию данных Android. Оператор принимает предусмотренные ст. 19 Закона № 152-ФЗ меры защиты от неправомерного доступа, изменения, раскрытия и утраты данных.</p>
+      </section>
+      <section aria-labelledby="ru-10">
+        <h2 id="ru-10">10. Изменения политики</h2>
+        <p>При изменении функций HappVPN, состава обработки или требований закона оператор обновляет Политику и размещает актуальную редакцию в приложении и на веб-странице HappVPN.</p>
+        <p>Веб-страница на GitHub Pages не содержит форм, аналитических счётчиков или рекламных скриптов HappVPN. При её посещении GitHub Pages записывает IP-адрес посетителя для безопасности.</p>
+      </section>
+      <section aria-labelledby="ru-11">
+        <h2 id="ru-11">11. Оператор и контакты</h2>
+        <p>ИП Шевелев Анатолий Алексеевич<br>
+          ОГРНИП: 325385000158336<br>
+          ИНН: 381117785055<br>
+          Почтовый адрес для обращений: 664007, Россия, Иркутская область, Иркутск, Пограничный, 4-20.<br>
+          Телефон: <a href="tel:+79964373684">+79964373684</a><br>
+          Электронная почта: <a href="mailto:happvpnapp@gmail.com">happvpnapp@gmail.com</a></p>
+      </section>
+    </article>
+    <article id="en" lang="en" aria-labelledby="title-en">
+      <header>
+        <h1 id="title-en">HappVPN Privacy Policy</h1>
+        <p><time datetime="2026-11-08">Revision of November 8, 2026</time></p>
+      </header>
+      <section aria-labelledby="en-1">
+        <h2 id="en-1">1. Scope</h2>
+        <p>This policy covers the HappVPN Android app, its backend and support inquiries. It applies to users, payers and people who contact the operator. Reading this policy does not constitute consent to data processing. Where a particular operation requires consent, it is obtained separately.</p>
+      </section>
+      <section aria-labelledby="en-2">
+        <h2 id="en-2">2. Data we process</h2>
+        <p>Access and subscriptions. HappVPN derives a pseudonymous device identifier by applying SHA-256 to the Android ID scoped to the app. The original Android ID is not sent to the backend. Records linked to the identifier may include trial usage dates and duration, subscription status and term, record creation date and last activity time, and bonus status. A legacy HappVPN token may be verified once to migrate an older subscription. Current access does not require Google sign-in.</p>
+        <p>Payments. HappVPN processes the plan, amount, currency, provider, order and payment identifiers, status and dates, and receipt generation and delivery details. The YooKassa or 2328.io checkout page opens in a browser. Before YooKassa checkout, the app asks for an email address to send the receipt. It is stored with the payment record and used to deliver the receipt and handle related inquiries. Full card details and bank codes are entered in the provider's interface and are not received by HappVPN.</p>
+        <p>Technical data. Requests to APIs, VPN endpoints and connectivity test endpoints involve processing IP addresses, request times and destinations, response codes, connection parameters, associated identifiers and error information. To deliver push notifications, HappVPN may register a Firebase Cloud Messaging token with the device identifier, language and notification status. Builds using Play Integrity obtain a verification token through Google and send it to the backend for verification. Some releases authorize API requests differently and do not request a Play Integrity token. The relevant Google Play services check for and install updates and display the app review prompt.</p>
+        <p>Support. When someone contacts the operator, the operator receives the sender's contact information, message and any attachments the sender chooses to provide. The operator uses this data to respond, resolve the issue and meet its obligations under Article 6(1)(2), (5) or (7) of Law No. 152-FZ, depending on the purpose of the inquiry. The operator may ask for proportionate verification of identity or authority to locate the record and avoid disclosing data to the wrong person.</p>
+      </section>
+      <section aria-labelledby="en-3">
+        <h2 id="en-3">3. Purposes, legal bases and methods</h2>
+        <p>Data necessary to provide the VPN, trial access, subscriptions, the chosen payment method and service support is processed to enter into and perform a contract at the user's request (Article 6(1)(5) of Russian Federal Law No. 152-FZ). Data for receipts, mandatory obligations and lawful requests is processed as required by law where applicable (Article 6(1)(2)).</p>
+        <p>For diagnostics, service protection and abuse prevention, the operator may process necessary technical data while respecting users' rights (Article 6(1)(7)). Where consent is the legal basis for a particular purpose, it is obtained separately and the operator processes data within its scope.</p>
+        <p>The app and backend process data automatically. Inquiries may be handled manually. Depending on the purpose, data is collected, recorded, stored, corrected, used, disclosed to necessary recipients, blocked or destroyed. HappVPN does not sell personal data or disclose it to advertising networks for profiling.</p>
+      </section>
+      <section aria-labelledby="en-4">
+        <h2 id="en-4">4. VPN, DNS and on-device data</h2>
+        <p>In VPN mode, Android VpnService creates a tunnel between the device and the selected endpoint. Traffic from apps excluded by split-tunneling settings takes a direct route. Protection on the path to the endpoint depends on the protocol and settings. The endpoint can access the data needed for routing, including the source IP, destination address, network parameters and traffic within the limits of the protocol. HTTPS content remains protected between the app and the destination service. HappVPN's subscription database is not designed to retain browsing history or traffic contents. Third-party VPN endpoints may keep their own technical logs.</p>
+        <p>DNS providers and test endpoints receive requests during name resolution and connectivity checks. Depending on the settings, recipients can include Cloudflare, Google, Microsoft and services the user selects for checks. They may see the request's IP address and technical parameters. The receipt email and subscription information are not sent to them for these purposes.</p>
+        <p>Settings, the installed-app list used for split tunneling, favorites, test results, VPN status, received and sent traffic counters, and app logs are processed on the device. The last connection configuration is saved on the device for reconnection. In builds that use Play Integrity, the saved access session is encrypted with an Android Keystore key. The installed-app list is not sent to the HappVPN API. Users may choose to share some of this data when contacting support. HappVPN does not request precise location permission.</p>
+      </section>
+      <section aria-labelledby="en-5">
+        <h2 id="en-5">5. Data recipients</h2>
+        <p>4VPS provides hosting for HappVPN's server infrastructure. Other recipients within the scope of their services include operators of third-party VPN endpoints, DNS services and test endpoints for connectivity; Google for Firebase Cloud Messaging, Play Integrity in builds that use it, and Google Play updates and reviews; YooKassa and 2328.io for the selected payment method; Russia's Federal Tax Service through My Tax for tax receipts; and Google (Gmail) for sending receipts and handling email correspondence. Data may be disclosed to competent authorities where required by law.</p>
+        <p>YooKassa and 2328.io may independently receive data users enter on their checkout pages. For YooKassa payments, transaction data is sent to My Tax to generate the receipt, and Gmail receives the recipient address, payment details and receipt for delivery. When processing is delegated, the operator defines its purposes, data, operations, and confidentiality and security requirements under Article 6(3) of Law No. 152-FZ.</p>
+      </section>
+      <section aria-labelledby="en-6">
+        <h2 id="en-6">6. Localization and cross-border transfers</h2>
+        <p>Databases used when collecting data of Russian citizens are subject to Article 18(5) of Law No. 152-FZ. If you select a VPN endpoint abroad, the source IP address and traffic needed to establish and route the connection pass through it. External DNS, Google, Gmail, international payment services and infrastructure may involve processing outside Russia. The country shown in an endpoint's listing is its stated location.</p>
+        <p>Before starting a cross-border transfer organized by the operator, Article 12 of Law No. 152-FZ applies, including separate notification to Roskomnadzor and compliance with applicable restrictions. Information about recipients and completed or planned cross-border transfers is provided on request to the extent required by Article 14.</p>
+      </section>
+      <section aria-labelledby="en-7">
+        <h2 id="en-7">7. Retention and destruction</h2>
+        <p>Server cleanup uses thresholds of 7 days for trial usage records, 90 days for successful transactions and 3 days for other transactions. A transaction may remain under reconciliation until the provider returns its status. A 90-day threshold applies to inactive subscription records that meet the cleanup conditions. Records with pending transactions, active subscriptions or a recorded bonus may be kept for accounting and access restoration. These periods apply to HappVPN records; payment, tax and other documents may be subject to separate mandatory retention periods.</p>
+        <p>Push registrations are retained for notification delivery and updated when the token changes. Invalid tokens are removed when Firebase reports them as invalid. Turning notifications off stops delivery after the server receives the updated preference. Correspondence is retained until the inquiry is resolved and thereafter if required by law or necessary to resolve a related dispute. Technical records are retained as needed to diagnose, investigate and prevent the relevant incidents, subject to applicable mandatory periods.</p>
+        <p>Once a processing purpose is fulfilled or consent serving as the legal basis is withdrawn, the operator ends the relevant processing and destroys the data where Article 21 of Law No. 152-FZ requires it, generally within 30 days. If another lawful basis applies, the operator retains only data needed for that purpose. If destruction within the required time is impossible, the operator blocks the data and destroys it within six months unless federal law sets a different deadline.</p>
+        <p>Local data remains until it is overwritten, you clear app data, or you uninstall the app. To request deletion of server data, contact the operator.</p>
+      </section>
+      <section aria-labelledby="en-8">
+        <h2 id="en-8">8. Your rights and inquiries</h2>
+        <p>You may obtain information about processing and access to your data, request correction, blocking, restriction or destruction where grounds exist, withdraw separate consent you previously gave, and challenge the operator's actions before Roskomnadzor or a court.</p>
+        <p>Contact the operator by email, mail, or phone using the details in the “<a href="#en-11">Operator and contact details</a>” section at the end of this policy. State which right you want to exercise and, if needed to locate a record, provide the receipt email or transaction number. Formal information requests must comply with Article 14(3) of Law No. 152-FZ. Never send passwords, VPN keys, bank codes or full card numbers.</p>
+        <p>The operator responds to access requests within 10 business days. This may be extended by up to 5 business days with a reasoned notice. The deadlines for correction, stopping processing and destruction are governed by Articles 20 and 21 of Law No. 152-FZ.</p>
+      </section>
+      <section aria-labelledby="en-9">
+        <h2 id="en-9">9. Data security</h2>
+        <p>Requests to the primary and fallback APIs use HTTPS with certificate validation. The server verifies authorization for protected endpoints. The app uses Android's data isolation. The operator takes the measures required by Article 19 of Law No. 152-FZ to protect data against unauthorized access, modification, disclosure and loss.</p>
+      </section>
+      <section aria-labelledby="en-10">
+        <h2 id="en-10">10. Changes to this policy</h2>
+        <p>This policy may be updated when HappVPN features, processing activities or legal requirements change. The current revision is published in the app and on the HappVPN website.</p>
+        <p>The GitHub Pages version contains no HappVPN forms, analytics counters or advertising scripts. When you visit it, GitHub Pages logs your IP address for security.</p>
+      </section>
+      <section aria-labelledby="en-11">
+        <h2 id="en-11">11. Operator and contact details</h2>
+        <p>Individual Entrepreneur Shevelev Anatoliy Alekseevich<br>
+          Registration number (OGRNIP): 325385000158336<br>
+          Russian taxpayer number (INN): 381117785055<br>
+          Postal address for inquiries: Pogranichny, 4-20, Irkutsk, Irkutsk Region, Russia, 664007.<br>
+          Phone: <a href="tel:+79964373684">+79964373684</a><br>
+          Email: <a href="mailto:happvpnapp@gmail.com">happvpnapp@gmail.com</a></p>
+      </section>
+    </article>
   </main>
 </body>
 </html>
